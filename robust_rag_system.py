@@ -209,7 +209,7 @@ class RobustRAGSystem:
         
         for file_path in file_paths:
             try:
-                print(f"📄 Processing: {Path(file_path).name}")
+                print(f" Processing: {Path(file_path).name}")
                 
                 # Get appropriate loader
                 loader = self.get_loader(file_path)
@@ -226,7 +226,7 @@ class RobustRAGSystem:
                     image_documents = self.process_pdf_with_images(file_path)
                     if image_documents:
                         documents.extend(image_documents)
-                        print(f"  ✅ Added {len(image_documents)} image-based documents")
+                        print(f"   Added {len(image_documents)} image-based documents")
                 
                 # Split documents into chunks
                 for doc in documents:
@@ -234,13 +234,13 @@ class RobustRAGSystem:
                     all_chunks.extend(chunks)
                 
                 processed_files.append(file_path)
-                print(f"  ✅ Processed {len(documents)} documents")
+                print(f"   Processed {len(documents)} documents")
                 
             except Exception as e:
                 logger.error(f"Error processing {file_path}: {e}")
-                print(f"  ❌ Failed to process {Path(file_path).name}")
+                print(f"   Failed to process {Path(file_path).name}")
         
-        print(f"✅ Total chunks: {len(all_chunks)}")
+        print(f"Total chunks: {len(all_chunks)}")
         return all_chunks, processed_files
     
     def create_knowledge_base(self, chunks: List[Any]):
@@ -251,13 +251,13 @@ class RobustRAGSystem:
             # Test embeddings
             test_text = "test"
             test_embedding = self.embeddings.embed_query(test_text)
-            print(f"✅ Embedding test successful. Vector dimension: {len(test_embedding)}")
+            print(f" Embedding test successful. Vector dimension: {len(test_embedding)}")
             
             # Create vector store
             vectorstore = FAISS.from_documents(chunks, self.embeddings)
             retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
             
-            print("✅ Vector store created successfully")
+            print("Vector store created successfully")
             return retriever
             
         except Exception as e:
@@ -311,11 +311,11 @@ class RobustRAGSystem:
                 }
                 
                 qa_pairs.append(qa_pair)
-                print(f"    ✅ Generated successfully")
+                print(f"    Generated successfully")
                 
             except Exception as e:
                 logger.error(f"Error generating answer for question {i}: {e}")
-                print(f"    ❌ Failed to generate answer")
+                print(f"    Failed to generate answer")
                 
                 # Add empty Q&A pair
                 qa_pairs.append({
@@ -327,7 +327,7 @@ class RobustRAGSystem:
                     "edited": False
                 })
         
-        print(f"✅ Generated {len(qa_pairs)} answers")
+        print(f"Generated {len(qa_pairs)} answers")
         return qa_pairs
     
     def _calculate_confidence(self, answer: str) -> float:
@@ -357,10 +357,10 @@ class RobustRAGSystem:
     
     def review_answers(self, qa_pairs: List[Dict]) -> List[Dict]:
         """Review all answers after generation."""
-        print("\n🚀 Starting Post-Generation Review")
-        print(f"📊 Total Q&A pairs to review: {len(qa_pairs)}")
-        print(f"💡 You can accept, edit, or skip each answer")
-        print(f"💡 Type 'q' at any time to quit the review")
+        print("\n Starting Post-Generation Review")
+        print(f" Total Q&A pairs to review: {len(qa_pairs)}")
+        print(f" You can accept, edit, or skip each answer")
+        print(f" Type 'q' at any time to quit the review")
         
         reviewed_pairs = []
         skipped_count = 0
@@ -376,7 +376,7 @@ class RobustRAGSystem:
                 if choice == 'a':  # Accept
                     reviewed_pairs.append(qa_pair)
                     accepted_count += 1
-                    print(f"✅ Accepted AI answer")
+                    print(f"Accepted AI answer")
                     break
                 
                 elif choice == 'e':  # Edit
@@ -388,11 +388,11 @@ class RobustRAGSystem:
                 elif choice == 's':  # Skip (keep AI answer)
                     reviewed_pairs.append(qa_pair)
                     skipped_count += 1
-                    print(f"⏭️  Skipped (keeping AI answer)")
+                    print(f"Skipped (keeping AI answer)")
                     break
                 
                 elif choice == 'q':  # Quit
-                    print(f"\n🛑 Review stopped early")
+                    print(f"\n Review stopped early")
                     # Add remaining pairs as accepted
                     reviewed_pairs.extend(qa_pairs[i:])
                     return reviewed_pairs
@@ -401,35 +401,35 @@ class RobustRAGSystem:
                     self._show_help()
                 
                 else:
-                    print("❌ Invalid choice. Please try again.")
+                    print("Invalid choice. Please try again.")
         
         print(f"\n🎉 Review Complete!")
-        print(f"📊 Summary:")
-        print(f"  ✅ Accepted: {accepted_count}")
-        print(f"  ✏️  Edited: {edited_count}")
-        print(f"  ⏭️  Skipped: {skipped_count}")
-        print(f"  📋 Total: {len(reviewed_pairs)}")
+        print(f"Summary:")
+        print(f"  Accepted: {accepted_count}")
+        print(f"   Edited: {edited_count}")
+        print(f"   Skipped: {skipped_count}")
+        print(f"  Total: {len(reviewed_pairs)}")
         
         return reviewed_pairs
     
     def _display_qa_pair(self, qa_pair: Dict, index: int, total: int):
         """Display a Q&A pair for review."""
         print(f"\n{'='*80}")
-        print(f"📋 Q&A Pair {index + 1} of {total}")
+        print(f"Q&A Pair {index + 1} of {total}")
         print(f"{'='*80}")
         
-        print(f"❓ Question: {qa_pair.get('question', 'N/A')}")
-        print(f"\n🤖 AI Answer: {qa_pair.get('ai_answer', 'N/A')}")
+        print(f"Question: {qa_pair.get('question', 'N/A')}")
+        print(f"\n AI Answer: {qa_pair.get('ai_answer', 'N/A')}")
         
         if qa_pair.get('confidence_score'):
-            print(f"\n📊 Confidence Score: {qa_pair['confidence_score']:.2f}")
+            print(f"\n Confidence Score: {qa_pair['confidence_score']:.2f}")
         
         if qa_pair.get('has_manual_input'):
-            print(f"\n✏️  Manual Answer: {qa_pair['manual_answer']}")
+            print(f"\nManual Answer: {qa_pair['manual_answer']}")
     
     def _get_user_choice(self) -> str:
         """Get user choice for Q&A pair review."""
-        print(f"\n📝 Review Options:")
+        print(f"\nReview Options:")
         print("  [a] Accept AI answer")
         print("  [e] Edit answer manually")
         print("  [s] Skip (keep AI answer)")
@@ -453,9 +453,9 @@ class RobustRAGSystem:
             qa_pair['manual_answer'] = manual_answer
             qa_pair['has_manual_input'] = True
             qa_pair['edited'] = True
-            print(f"✅ Manual answer saved")
+            print(f" Manual answer saved")
         else:
-            print(f"⏭️  Keeping AI answer")
+            print(f" Keeping AI answer")
         
         return qa_pair
     
@@ -473,10 +473,10 @@ class RobustRAGSystem:
         try:
             with open(filename, 'w', encoding='utf-8') as f:
                 json.dump(qa_pairs, f, indent=2, ensure_ascii=False)
-            print(f"✅ Saved {len(qa_pairs)} Q&A pairs to {filename}")
+            print(f" Saved {len(qa_pairs)} Q&A pairs to {filename}")
         except Exception as e:
             logger.error(f"Error saving Q&A pairs: {e}")
-            print(f"❌ Error saving Q&A pairs")
+            print(f" Error saving Q&A pairs")
     
     def load_qa_pairs(self, filename: str = "qa_pairs.json") -> List[Dict]:
         """Load Q&A pairs from JSON file."""
@@ -500,7 +500,7 @@ class RobustRAGSystem:
                     else:
                         return []
             else:
-                print(f"❌ Questions file not found: {filename}")
+                print(f"Questions file not found: {filename}")
                 return []
         except Exception as e:
             logger.error(f"Error loading questions: {e}")
@@ -508,14 +508,14 @@ class RobustRAGSystem:
 
 def main():
     """Main function for the robust RAG system."""
-    print("🚀 Robust Multi-File RAG System")
+    print(" Robust Multi-File RAG System")
     print("=" * 50)
     print("Features: Multiple files → Generate all answers → Manual review")
     print("=" * 50)
     
     rag_system = RobustRAGSystem()
     
-    print("\n📋 Choose operation:")
+    print("\n Choose operation:")
     print("1. Process multiple files and generate answers")
     print("2. Review existing Q&A pairs")
     print("3. Exit")
@@ -533,17 +533,17 @@ def main():
             if os.path.isfile(file_path):
                 file_paths.append(file_path)
             else:
-                print(f"❌ File not found: {file_path}")
+                print(f" File not found: {file_path}")
         
         if not file_paths:
-            print("❌ No valid files provided.")
+            print(" No valid files provided.")
             return
         
         # Process documents
         chunks, processed_files = rag_system.process_documents(file_paths)
         
         if not chunks:
-            print("❌ No documents were processed successfully.")
+            print(" No documents were processed successfully.")
             return
         
         # Create knowledge base
@@ -552,7 +552,7 @@ def main():
         # Load questions
         questions = rag_system.load_questions()
         if not questions:
-            print("❌ No questions found. Please create a questions.json file.")
+            print(" No questions found. Please create a questions.json file.")
             return
         
         # Generate all answers first
@@ -562,29 +562,29 @@ def main():
         rag_system.save_qa_pairs(qa_pairs, "generated_qa_pairs.json")
         
         # Ask if user wants to review
-        review_choice = input("\n🤔 Would you like to review the answers now? (y/n): ").strip().lower()
+        review_choice = input("\n Would you like to review the answers now? (y/n): ").strip().lower()
         if review_choice in ['y', 'yes']:
             reviewed_pairs = rag_system.review_answers(qa_pairs)
             rag_system.save_qa_pairs(reviewed_pairs, "reviewed_qa_pairs.json")
         else:
-            print("✅ Answers saved without review")
+            print(" Answers saved without review")
     
     elif choice == "2":
         # Review existing Q&A pairs
         qa_pairs = rag_system.load_qa_pairs()
         
         if not qa_pairs:
-            print("❌ No Q&A pairs found to review.")
+            print(" No Q&A pairs found to review.")
             return
         
         reviewed_pairs = rag_system.review_answers(qa_pairs)
         rag_system.save_qa_pairs(reviewed_pairs, "reviewed_qa_pairs.json")
     
     elif choice == "3":
-        print("👋 Goodbye!")
+        print(" Goodbye!")
     
     else:
-        print("❌ Invalid choice.")
+        print(" Invalid choice.")
 
 if __name__ == "__main__":
     main() 
