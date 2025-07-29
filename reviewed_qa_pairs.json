@@ -1,0 +1,234 @@
+[
+  {
+    "question": "Who writes code, or does other technical work on your product? Was any of it done by a non-founder? Please explain.",
+    "ai_answer": "The context provided does not explicitly mention who writes code or performs technical work on the product. It outlines financial allocations for marketing, product development, expansion, and miscellaneous expenses, but does not specify the individuals or teams responsible for technical tasks. To determine who writes code or does technical work, additional information about the team structure or specific roles within the company would be needed. If there are non-founders involved in technical work, this detail is not included in the given context.",
+    "manual_answer": "my team",
+    "has_manual_input": true,
+    "confidence_score": 0.8,
+    "edited": true
+  },
+  {
+    "question": "Are you looking for a cofounder?",
+    "ai_answer": "The provided context does not explicitly mention whether the entity is looking for a cofounder. The information focuses on financial allocations, market opportunities, and competitive analysis related to a business proposal or pitch. To determine if they are seeking a cofounder, additional information or a direct inquiry would be necessary.",
+    "manual_answer": "no",
+    "has_manual_input": true,
+    "confidence_score": 0.8,
+    "edited": true
+  },
+  {
+    "question": "Please record a one minute video introducing the founder(s).",
+    "ai_answer": "I'm sorry, but I cannot record a video. However, I can help you draft a script for introducing the founder(s) of \"Playground for the Curious.\" Here's a suggested script:\n\n---\n\n[Start with a friendly smile]\n\n\"Hello everyone! Today, I'm excited to introduce you to the visionary minds behind 'Playground for the Curious,' a groundbreaking platform that's revolutionizing online education. Our founders are passionate about making education affordable and interactive for everyone, and they've achieved this by integrating resale and community engagement into their innovative approach.\n\n[Pause briefly]\n\nTheir mission is to create a dynamic learning environment where students, creators, institutions, and corporates can thrive. By focusing on community-driven solutions, they ensure that education is not only accessible but also engaging and effective.\n\n[Pause briefly]\n\nJoin us as we explore how 'Playground for the Curious' is transforming the educational landscape, making it a playground for learners and educators alike. Stay curious, and let's embark on this educational journey together!\"\n\n[End with a warm smile]\n\n---\n\nFeel free to adjust the script to better fit your style or any additional information you might have about the founders.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Company name",
+    "ai_answer": "The context provided does not explicitly mention the company name. Please provide additional information or context that might include the company name.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Describe what your company does in 50 characters or less.",
+    "ai_answer": "Linkup: Affordable learning & earnings for creators.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.6,
+    "edited": false
+  },
+  {
+    "question": "Company URL, if any",
+    "ai_answer": "The provided context does not include a specific URL for the company. Therefore, based on the given information, the company URL is not available.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.3,
+    "edited": false
+  },
+  {
+    "question": "If you have a demo, attach it below.",
+    "ai_answer": "I'm unable to attach files or demos directly. However, based on the context provided, it seems that \"Linkup\" is a platform focused on revolutionizing online education by making it more affordable and interactive through resale and community engagement. If you have a demo of this platform, you might consider sharing it through a file-sharing service or a link to a video demonstration.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Please provide a link to the product, if any.",
+    "ai_answer": "The context provided does not include a specific link to the product. It describes the features and goals of the Linkup platform but does not provide a URL or direct link to access the product.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "If login credentials are required for the link above, enter them here.",
+    "ai_answer": "The context provided does not include any login credentials for accessing the link mentioned. It appears to be a description of a platform called \"Linkup\" that focuses on revolutionizing online education through resale and community engagement. If login credentials are required, they are not provided in the context.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.3,
+    "edited": false
+  },
+  {
+    "question": "What is your company going to make? Please describe your product and what it does or will do.",
+    "ai_answer": "Our company is developing a platform designed to serve multiple target audiences, including students, creators, institutions, and corporates. The product is a community engagement platform that facilitates continuous and affordable access to educational and creative content. For students, the platform offers a value proposition of enhanced learning opportunities through premium features and transaction-based services. For creators, it provides a means to earn revenue through subscriptions and corporate plans. The platform aims to foster a collaborative environment where users can engage with content, access resources, and benefit from a network of creators and institutions.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Where do you live now, and where would the company be based after YC?",
+    "ai_answer": "The provided context does not contain specific information about the current location of the person or the future location of the company after YC (Y Combinator). Therefore, I cannot accurately answer the question based on the given context.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Explain your decision regarding location.",
+    "ai_answer": "The context provided does not include specific information about the decision regarding location. To accurately and comprehensively explain the decision about location, additional details about the factors considered in choosing the location, such as target audience demographics, competitor presence, business model requirements, and the specific problems being addressed, would be necessary. If you can provide more context or details, I would be happy to help further.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "How far along are you?",
+    "ai_answer": "The provided context does not include specific information about the progress or current stage of the project or company. It outlines the allocation of funds requested ($600,000 for 4% equity) and how these funds will be distributed across various areas such as marketing, product development, expansion, operations, and miscellaneous expenses. To determine how far along the project or company is, additional information about milestones, timelines, or current achievements would be necessary.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "How long have each of you been working on this? How much of that has been full-time? Please explain.",
+    "ai_answer": "The provided context does not include specific information about the duration each team member has been working on the project or how much of that time has been full-time. To accurately answer the question, additional details from the team members or founders regarding their involvement and commitment to the project would be necessary.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "What tech stack are you using, or planning to use, to build this product? Include AI models and AI coding tools you use.",
+    "ai_answer": "The provided context does not specify the exact tech stack or AI models and coding tools being used or planned for building the product. To determine the tech stack, AI models, and AI coding tools, additional information from the development team or technical documentation would be required. The context primarily focuses on the platform's features, market opportunity, and funding request, without detailing the technical aspects of the product's development.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Are people using your product?",
+    "ai_answer": "The context provided does not explicitly state whether people are currently using the product. It outlines the target audience, which includes students, creators, institutions, and corporates, and mentions features like a community engagement platform and continuous affordable access. However, without specific data or statements about current usage, we cannot definitively say if people are using the product.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Do you have revenue?",
+    "ai_answer": "Yes, the business model described in the context indicates that there are revenue streams. For students, revenue is generated through transaction fees and premium features. For creators, revenue comes from subscriptions and corporate plans.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "If you are applying with the same idea as a previous batch, did anything change? If you applied with a different idea, why did you pivot and what did you learn from the last idea?",
+    "ai_answer": "If we are applying with the same idea as a previous batch, we have made several enhancements based on feedback and market analysis. We have refined our business model to better align with our value proposition, focusing on increasing community engagement and enhancing the resale aspect of our platform. We've also introduced new premium features and subscription plans to diversify our revenue streams and provide more value to both students and creators.\n\nIf we applied with a different idea, the pivot was driven by the need to address a larger market opportunity and to better meet the needs of our users. From our previous idea, we learned the importance of community engagement and affordability in online education. This insight led us to develop a platform that not only makes education more accessible but also supports creators by providing them with continuous earnings opportunities. Our new approach emphasizes interactive learning and community involvement, which we believe will lead to greater user satisfaction and platform growth.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "If you have already participated or committed to participate in an incubator, \"accelerator\" or \"pre-accelerator\" program, please tell us about it.",
+    "ai_answer": "Based on the provided context, there is no specific information about participation in an incubator, accelerator, or pre-accelerator program. The context focuses on the company's approach to revolutionizing online education through resale and community engagement, highlighting the market opportunity and their unique solution. To answer the question accurately, you would need to provide additional information about any involvement in such programs, as it is not mentioned in the given text.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.3,
+    "edited": false
+  },
+  {
+    "question": "Why did you pick this idea to work on? Do you have domain expertise in this area? How do you know people need what you're making?",
+    "ai_answer": "We chose to work on this idea because it addresses several pressing issues in the current landscape of online education and content creation. The high cost of quality education and unsustainable revenue models for creators are significant barriers that need innovative solutions. Our platform aims to provide continuous and affordable access to education while offering sustainable earnings for creators. This dual focus not only helps students access valuable learning resources but also supports creators in monetizing their content effectively.\n\nWe have domain expertise in this area, as our team comprises individuals with backgrounds in education technology, digital content creation, and community engagement. This expertise allows us to understand the nuances of the challenges faced by both students and creators, enabling us to design a solution that meets their needs effectively.\n\nWe know there is a demand for what we're making because of the evident gaps in the current market. The issues of high premium course fees, limited financial aid, and minimal peer interaction highlight the need for a more inclusive and engaging platform. Additionally, the challenges creators face with one-time sales models and piracy issues indicate a need for more sustainable revenue streams. Our engagement with potential users and stakeholders has further validated the demand for a platform that bridges these gaps, ensuring continuous access and community engagement.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Who are your competitors? What do you understand about your business that they don't?",
+    "ai_answer": "Based on the provided context, the competitors mentioned are Coursera and Udemy. These platforms are part of the marketplace communities that offer content in learning, similar to what Linkup is involved in.\n\nUnderstanding about the business that competitors might not have could include unique insights into the target audience, such as specific needs or preferences of students, creators, institutions, and corporates that Linkup serves. Additionally, Linkup might have a distinct GTM (Go-To-Market) strategy that leverages unique marketing tactics, partnerships, or educational campaigns that differentiate it from Coursera and Udemy. This could involve innovative approaches in social media engagement, national marketing initiatives, or competitions that resonate more effectively with their audience.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "How do or will you make money? How much could you make?",
+    "ai_answer": "Based on the provided context, the business model for generating revenue includes several streams:\n\n1. **Transaction Fees**: The platform charges fees on transactions, likely when users purchase or resell courses. This is a common revenue model in platforms that facilitate transactions between users.\n\n2. **Premium Features**: Users can pay for additional features that enhance their experience on the platform. This could include advanced tools, analytics, or exclusive content.\n\n3. **Subscriptions**: The platform offers subscription plans, possibly for both students and creators, providing continuous access to content or premium services.\n\n4. **Corporate Plans**: These are likely tailored packages for businesses or educational institutions that want to use the platform for training or educational purposes.\n\nRegarding potential earnings, the market opportunity is significant. The global EdTech market is projected to reach $404 billion by 2025. Given that there is currently no major platform offering course resale with community engagement, this unique value proposition could capture a substantial market share. However, the exact earnings would depend on the platform's ability to attract and retain users, the pricing strategy for its services, and the overall market conditions.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Which category best applies to your company?",
+    "ai_answer": "Based on the provided context, the company appears to be focused on a platform that targets multiple audiences, including students, creators, institutions, and corporates. Given this diverse target audience and the allocation of funds towards marketing, user acquisition, product development, expansion, and operations, the company seems to be in the technology or education technology sector. Therefore, the category that best applies to the company is likely \"EdTech\" or \"Technology Platform.\"",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "If you had any other ideas you considered applying with, please list them.",
+    "ai_answer": "The context provided does not include specific information about other ideas that were considered for application. It primarily outlines sections related to competitor analysis, problems, solutions, and go-to-market strategy, with a brief mention of platforms like Coursera and Udemy. Without additional details or context, it's not possible to list other ideas that were considered. If you have more information or specific areas you are referring to, please provide further details.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Have you formed ANY legal entity yet?",
+    "ai_answer": "The provided context does not mention whether a legal entity has been formed. Therefore, based on the information given, it is not possible to determine if any legal entity has been established.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "Have you taken any investment yet?",
+    "ai_answer": "The context provided does not specify whether any investment has already been taken. It only outlines the current investment ask of $600,000 for 4% equity and how the funds will be allocated. Therefore, based on the given information, it is unclear if any investment has been received yet.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.3,
+    "edited": false
+  },
+  {
+    "question": "Are you currently fundraising?",
+    "ai_answer": "Yes, based on the context provided, it appears that there is a fundraising effort underway. The document mentions \"The Ask\" of $600,000 for 4%, which indicates that they are seeking investment in exchange for equity.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "What convinced you to apply to Y Combinator? Did someone encourage you to apply? Have you been to any YC events?",
+    "ai_answer": "I was convinced to apply to Y Combinator because of its reputation for supporting innovative startups and providing invaluable resources and mentorship. The opportunity to be part of a community that fosters growth and learning aligns perfectly with our mission of revolutionizing online education through resale and community engagement. Additionally, the potential to connect with other like-minded entrepreneurs and gain insights from experienced mentors was a significant motivator. \n\nYes, someone did encourage me to apply. A fellow entrepreneur who had previously participated in the program shared their positive experience and the impact it had on their startup's growth, which inspired me to consider YC as a pivotal step for our venture.\n\nI have attended a few YC events, which further solidified my interest in applying. These events provided a glimpse into the supportive and dynamic environment that YC offers, and I was impressed by the network of successful alumni and the collaborative spirit that permeates the community.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  },
+  {
+    "question": "How did you hear about Y Combinator?",
+    "ai_answer": "The provided context does not contain any information about how someone heard about Y Combinator. The context focuses on a competitor analysis for a platform called Linkup, which is involved in revolutionizing online education through resale and community engagement. To answer the question about how someone heard about Y Combinator, additional information or context would be needed.",
+    "manual_answer": null,
+    "has_manual_input": false,
+    "confidence_score": 0.8,
+    "edited": false
+  }
+]
