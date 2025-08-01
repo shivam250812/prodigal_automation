@@ -19,10 +19,10 @@ def load_qa_pairs(filename="reviewed_qa_pairs.json"):
             with open(filename, 'r', encoding='utf-8') as f:
                 return json.load(f)
         else:
-            print(f"❌ File not found: {filename}")
+            print(f" File not found: {filename}")
             return []
     except Exception as e:
-        print(f"❌ Error loading Q&A pairs: {e}")
+        print(f" Error loading Q&A pairs: {e}")
         return []
 
 def create_answer_mapping(qa_pairs):
@@ -116,9 +116,9 @@ def extract_radio_button_answers(qa_pairs):
                 'qa_pair': qa_pair
             }
             
-            print(f"🎯 Extracted radio button answer: {question}")
-            print(f"📝 Answer: {answer_text[:100]}...")
-            print(f"✅ Determined: {'YES' if is_yes else 'NO'}")
+            print(f" Extracted radio button answer: {question}")
+            print(f" Answer: {answer_text[:100]}...")
+            print(f" Determined: {'YES' if is_yes else 'NO'}")
             print("---")
     
     return extracted_answers
@@ -149,7 +149,7 @@ async def click_radio_button(page, question_type, is_yes):
     }
     
     if question_type not in radio_selectors:
-        print(f"❌ Unknown question type: {question_type}")
+        print(f" Unknown question type: {question_type}")
         return False
     
     yes_no = "yes" if is_yes else "no"
@@ -157,25 +157,25 @@ async def click_radio_button(page, question_type, is_yes):
     
     try:
         await page.locator(selector).click()
-        print(f"✅ Clicked radio button for {question_type}: {yes_no.upper()}")
+        print(f" Clicked radio button for {question_type}: {yes_no.upper()}")
         return True
     except Exception as e:
-        print(f"❌ Failed to click radio button for {question_type}: {e}")
+        print(f" Failed to click radio button for {question_type}: {e}")
         return False
 
 async def setup_form_with_radio_buttons():
     """Set up the form and click radio buttons using Playwright, then return the page URL."""
-    print("🎯 Setting up form and clicking radio buttons with Playwright...")
+    print(" Setting up form and clicking radio buttons with Playwright...")
     
     # Load Q&A pairs
     qa_pairs = load_qa_pairs()
     if not qa_pairs:
-        print("❌ No Q&A pairs found.")
+        print(" No Q&A pairs found.")
         return None
     
     # Extract radio button answers
     radio_answers = extract_radio_button_answers(qa_pairs)
-    print(f"🎯 Extracted {len(radio_answers)} radio button answers")
+    print(f" Extracted {len(radio_answers)} radio button answers")
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=False, slow_mo=500)
@@ -187,66 +187,66 @@ async def setup_form_with_radio_buttons():
             await page.goto("https://apply.ycombinator.com/")
             
             # Click Apply Now button
-            print("📝 Clicking Apply Now...")
+            print(" Clicking Apply Now...")
             await page.click("a.btn.apply")
             
             # Login
-            print("🔐 Logging in...")
+            print(" Logging in...")
             await page.fill("#ycid-input", yc_email)
             await page.fill("#password-input", yc_password)
             await page.click("button[type='submit']")
             
             # Wait for login and click Finish application
             await page.wait_for_load_state("networkidle")
-            print("📋 Clicking Finish application...")
+            print(" Clicking Finish application...")
             await page.click("text=Finish application")
             await page.wait_for_load_state("networkidle")
             
             # Process radio buttons
-            print("🎯 Processing radio buttons...")
+            print(" Processing radio buttons...")
             for question, info in radio_answers.items():
                 question_type = info['type']
                 is_yes = info['is_yes']
                 
-                print(f"🎯 Processing: {question}")
-                print(f"✅ Will click: {'YES' if is_yes else 'NO'}")
+                print(f" Processing: {question}")
+                print(f" Will click: {'YES' if is_yes else 'NO'}")
                 
                 success = await click_radio_button(page, question_type, is_yes)
                 
                 if success:
-                    print(f"✅ Successfully processed: {question}")
+                    print(f" Successfully processed: {question}")
                 else:
-                    print(f"❌ Failed to process: {question}")
+                    print(f" Failed to process: {question}")
                 
                 await page.wait_for_timeout(1000)
             
-            print("✅ Radio button processing completed!")
+            print(" Radio button processing completed!")
             
             # Get the current URL and page state
             current_url = page.url
             print(f"🔗 Current URL: {current_url}")
             
             # Keep the browser open and return the URL
-            print("🔍 Browser will remain open for browser_use to continue...")
+            print(" Browser will remain open for browser_use to continue...")
             return current_url
             
         except Exception as e:
-            print(f"❌ Error during setup: {e}")
+            print(f" Error during setup: {e}")
             return None
 
 # Load Q&A pairs
 qa_pairs = load_qa_pairs()
 if not qa_pairs:
-    print("❌ No Q&A pairs found. Please run the RAG system first.")
+    print(" No Q&A pairs found. Please run the RAG system first.")
     exit(1)
 
 # Create answer mapping
 answer_mapping = create_answer_mapping(qa_pairs)
-print(f"✅ Loaded {len(answer_mapping)} answers from reviewed_qa_pairs.json")
+print(f" Loaded {len(answer_mapping)} answers from reviewed_qa_pairs.json")
 
 # Extract radio button answers
 radio_answers = extract_radio_button_answers(qa_pairs)
-print(f"🎯 Extracted {len(radio_answers)} radio button answers from Q&A pairs")
+print(f" Extracted {len(radio_answers)} radio button answers from Q&A pairs")
 
 # Convert answers to JSON string for the task
 answers_json = json.dumps(answer_mapping, indent=2)
@@ -296,14 +296,14 @@ FILL THE FORM NOW using the answers provided above.
 
 async def main():
     # First, set up the form and click radio buttons
-    print("🚀 Starting YC Application Form Filler")
+    print(" Starting YC Application Form Filler")
     print("=" * 60)
     
     form_url = await setup_form_with_radio_buttons()
     
     if form_url:
-        print("✅ Form setup completed successfully!")
-        print("🤖 Now starting browser_use agent for form filling...")
+        print(" Form setup completed successfully!")
+        print(" Now starting browser_use agent for form filling...")
         print(f"🔗 Form URL: {form_url}")
         
         # Then run the browser_use agent for form filling
@@ -311,7 +311,7 @@ async def main():
         result = await agent.run()
         print("Form filling completed!")
     else:
-        print("❌ Form setup failed. Stopping.")
+        print(" Form setup failed. Stopping.")
 
 if __name__ == "__main__":
     asyncio.run(main())
