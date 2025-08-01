@@ -1,0 +1,19 @@
+# Core LLM and LangChain dependencies
+openai
+langchain-openai
+langchain-community
+
+# Browser automation
+playwright
+browser-use # Note: This library might be custom or require specific installation steps if not publicly available.
+
+# Document processing and OCR
+python-pptx # For .pptx files
+pdf2image     # For converting PDF pages to images
+pytesseract   # For Tesseract OCR
+easyocr       # For EasyOCR
+opencv-python # Dependency for image processing (used by OCR libraries)
+numpy         # Dependency for numerical operations (often used with image processing)
+
+# Environment variables
+python-dotenv
